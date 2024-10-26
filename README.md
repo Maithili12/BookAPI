@@ -23,17 +23,18 @@
 "name": "John Doe",
 "email": "john@example.com",
 "password": "password123"
-}```
+} ```
 
-    Example Response (Success, 201):
+### Example Response (Success, 201):
     
 ```json
-
 {
 "message": "User registered successfully"
 }```
-Example Response (Failure, 500):
-json
+
+###Example Response (Failure, 500):
+
+```json
 
 {
 "error": "Registration failed",
@@ -50,13 +51,13 @@ Request Body:
 "email": "john@example.com",
 "password": "password123"
 }```
-Example Response (Success, 200):
+### Example Response (Success, 200):
 ```json
 
 {
 "token": "your_api_token_here"
 }```
-Example Response (Failure, 422):
+### Example Response (Failure, 422):
 ```json
 
 {
@@ -74,7 +75,7 @@ Example Response (Success, 200):
 {
 "message": "Logged out successfully"
 }```
-Example Response (Failure, 500):
+### Example Response (Failure, 500):
 ```json
 
 {
@@ -135,7 +136,7 @@ Request Body:
 "published_date": "2024-01-01",
 "genre": "Fiction"
 }```
-Example Response (Success, 201):
+### Example Response (Success, 201):
 ```json
 
 {
@@ -166,7 +167,7 @@ Example Response (Success, 200):
 "created_at": "2023-10-20T12:34:56Z",
 "updated_at": "2023-10-20T12:34:56Z"
 }```
-Example Response (Not Found, 404):
+### Example Response (Not Found, 404):
 ```json
 
 {
