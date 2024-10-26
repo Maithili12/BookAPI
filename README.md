@@ -23,14 +23,14 @@
 "name": "John Doe",
 "email": "john@example.com",
 "password": "password123"
-}
+}```
 
 Example Response (Success, 201):
-json
+```json
 
 {
 "message": "User registered successfully"
-}
+}```
 Example Response (Failure, 500):
 json
 
@@ -38,49 +38,49 @@ json
 "error": "Registration failed",
 "message": "The email has already been taken."
 }
-
+```
 ## 2. User Login
 
 Endpoint: POST /api/login
 Request Body:
-json
+```json
 
 {
 "email": "john@example.com",
 "password": "password123"
-}
+}```
 Example Response (Success, 200):
-json
+```json
 
 {
 "token": "your_api_token_here"
-}
+}```
 Example Response (Failure, 422):
-json
+```json
 
 {
 "error": "Invalid credentials",
 "message": "The provided credentials are incorrect."
 }
-
+```
 ## 3. User Logout
 
 Endpoint: POST /api/logout
 Headers: Authorization: Bearer {your_api_token_here}
 Example Response (Success, 200):
-json
+```json
 
 {
 "message": "Logged out successfully"
-}
+}```
 Example Response (Failure, 500):
-json
+```json
 
 {
 "error": "Logout failed",
 "message": "Error message if any."
 }
-
+```
 ##  4. Get All Books with Pagination and Search
 
 Endpoint: GET /api/books
@@ -89,7 +89,7 @@ page: Page number for pagination.
 search: Keyword for searching by title, author, or genre.
 Example Request: GET /api/books?search=Science&page=1
 Example Response (Success, 200):
-json
+```json
 
 {
 "data": [
@@ -120,22 +120,22 @@ json
 "total": 100
 }
 }
-
+```
 ## 5. Create a Book
 
 Endpoint: POST /api/books
 Headers: Authorization: Bearer {your_api_token_here}
 Request Body:
-json
+```json
 
 {
 "title": "New Book Title",
 "author": "Author Name",
 "published_date": "2024-01-01",
 "genre": "Fiction"
-}
+}```
 Example Response (Success, 201):
-json
+```json
 
 {
 "message": "Book created successfully",
@@ -149,12 +149,12 @@ json
 "updated_at": "2024-01-01T12:00:00Z"
 }
 }
-
+```
 ## 6. Show a Specific Book
 
 Endpoint: GET /api/books/{id}
 Example Response (Success, 200):
-json
+```json
 
 {
 "id": 1,
@@ -164,27 +164,27 @@ json
 "genre": "Science",
 "created_at": "2023-10-20T12:34:56Z",
 "updated_at": "2023-10-20T12:34:56Z"
-}
+}```
 Example Response (Not Found, 404):
-json
+```json
 
 {
 "error": "Book not found"
 }
-
+```
 ## 7. Update a Book
 
 Endpoint: PUT /api/books/{id}
 Headers: Authorization: Bearer {your_api_token_here}
 Request Body:
-json
+```json
 
 {
 "title": "Updated Book Title",
 "author": "Updated Author Name"
-}
+}```
 Example Response (Success, 200):
-json
+```json
 
 {
 "message": "Book updated successfully",
@@ -198,30 +198,30 @@ json
 "updated_at": "2023-10-20T15:00:00Z"
 }
 }
-
+```
 ## 8. Delete a Book (Soft Delete)
 
 Endpoint: DELETE /api/books/{id}
 Headers: Authorization: Bearer {your_api_token_here}
 Example Response (Success, 200):
-json
+```json
 
 {
 "message": "Book deleted successfully"
-}
+}```
 Example Response (Not Found, 404):
 json
 
 {
 "error": "Book not found"
 }
-
+```
 ## 9. Search Books by Genre or Author
 
 Endpoint: GET /api/books/search?search={query}
 Example Request: GET /api/books/search?search=Fiction
 Example Response (Success, 200):
-json
+```json
 
 [
 {
@@ -234,7 +234,7 @@ json
 "updated_at": "2023-05-15T12:00:00Z"
 },
 ]
-
+```
 ## Authentication
 
 Use Laravel Sanctum for API authentication. Ensure to include the token in the request headers for protected routes.
