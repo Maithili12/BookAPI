@@ -25,7 +25,8 @@
 "password": "password123"
 }```
 
-Example Response (Success, 201):
+    Example Response (Success, 201):
+    
 ```json
 
 {
