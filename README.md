@@ -170,7 +170,6 @@ Example Response (Success, 200):
 ## Authentication
 
 Use Laravel Sanctum for API authentication. Ensure to include the token in the request headers for protected routes.
-```
 
 ## 1. User Registration
 
