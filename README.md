@@ -13,16 +13,18 @@
 
 ## API Endpoints
 
-1. ## User Registration
+## 1. User Registration
+
     Endpoint: POST /api/register
     Request Body:
-    json
 
+```json
 {
 "name": "John Doe",
 "email": "john@example.com",
 "password": "password123"
 }
+
 Example Response (Success, 201):
 json
 
@@ -35,9 +37,9 @@ json
 {
 "error": "Registration failed",
 "message": "The email has already been taken."
-} 
+}
 
-2. ## User Login
+## 2. User Login
 
 Endpoint: POST /api/login
 Request Body:
@@ -61,7 +63,7 @@ json
 "message": "The provided credentials are incorrect."
 }
 
-3. ## User Logout
+## 3. User Logout
 
 Endpoint: POST /api/logout
 Headers: Authorization: Bearer {your_api_token_here}
@@ -77,9 +79,9 @@ json
 {
 "error": "Logout failed",
 "message": "Error message if any."
-} 
+}
 
-4. ## Get All Books with Pagination and Search
+##  4. Get All Books with Pagination and Search
 
 Endpoint: GET /api/books
 Optional Query Parameters:
@@ -117,9 +119,9 @@ json
 "to": 10,
 "total": 100
 }
-} 
+}
 
-5. ## Create a Book
+## 5. Create a Book
 
 Endpoint: POST /api/books
 Headers: Authorization: Bearer {your_api_token_here}
@@ -146,9 +148,9 @@ json
 "created_at": "2024-01-01T12:00:00Z",
 "updated_at": "2024-01-01T12:00:00Z"
 }
-} 
+}
 
-6. ## Show a Specific Book
+## 6. Show a Specific Book
 
 Endpoint: GET /api/books/{id}
 Example Response (Success, 200):
@@ -168,9 +170,9 @@ json
 
 {
 "error": "Book not found"
-} 
+}
 
-7. ## Update a Book
+## 7. Update a Book
 
 Endpoint: PUT /api/books/{id}
 Headers: Authorization: Bearer {your_api_token_here}
@@ -195,9 +197,9 @@ json
 "created_at": "2023-10-20T12:34:56Z",
 "updated_at": "2023-10-20T15:00:00Z"
 }
-} 
+}
 
-8. ## Delete a Book (Soft Delete)
+## 8. Delete a Book (Soft Delete)
 
 Endpoint: DELETE /api/books/{id}
 Headers: Authorization: Bearer {your_api_token_here}
@@ -212,9 +214,9 @@ json
 
 {
 "error": "Book not found"
-} 
+}
 
-9. ## Search Books by Genre or Author
+## 9. Search Books by Genre or Author
 
 Endpoint: GET /api/books/search?search={query}
 Example Request: GET /api/books/search?search=Fiction
@@ -236,3 +238,4 @@ json
 ## Authentication
 
 Use Laravel Sanctum for API authentication. Ensure to include the token in the request headers for protected routes.
+```
